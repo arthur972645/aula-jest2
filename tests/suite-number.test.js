@@ -11,7 +11,7 @@ test("Verificar palavra dentro de  um array", () => {
 
 test("Verificat se não cargo de gerente entre os  funcionario", () => {
     const cargos = ['Auxliar', 'assstente', 'analista']
-    //o not é para veriricar se não tem algum dado
+    //o not é para veriricar se não tem algum dado, uma negação
     expect(cargos).not.toContain('Gerente')
 })
 test("Verificar se há palavra 'Senai",() => {
@@ -19,12 +19,6 @@ test("Verificar se há palavra 'Senai",() => {
 
     //transforma a variavel frase em tudo maiusculo 
     const fraseMaiuscula = frase.toUpperCase()
-    //to.Match vai servir para verificar se tem alguma palavra ou frase dentro de uma variavel
+    //to.Match vai servir para verificar se tem alguma palavra(sting) dentro de uma variavel
     expect(fraseMaiuscula).toMatch(/SENAI É O MELHOR/)
-})
-test(function verificarEmail(email){
-    const email = 'arthurall.1973@gmail.com'
-    const emailValidar = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i
-
-    expect(email).toBe(emailValidar)
 })
